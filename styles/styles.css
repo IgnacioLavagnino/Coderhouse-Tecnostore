@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Onest;
+    src: url(../font/Onest-VariableFont_wght.ttf);
+}
+
+/* header */
+
+header{
+    background-color: rgb(45, 137, 241);
+}
+
+.header-cont{
+    display: grid;
+}
+
+.Search-Bar{
+    width: 30vw;
+    height: 4vh;
+    border-radius: 30px;
+    background-color: antiquewhite;
+    text-align: end;
+    padding-right: 20px;
+}
+
+.enlace-menu{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.enlace-menu:visited {
+    color: antiquewhite;
+}
+
+.Logo{
+    height: 10vh;
+    width: 15vw;
+    background-color: rgb(45, 137, 241);
+}
+
+/* body */
+
+body{
+    font-size: 40px;
+    font-family: Onest;
+}
+
+.CarrouselImg{
+    width: 97vw;
+    margin: 15px;
+}
+
+
+.Store-Item-Grid{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: flex;
+    gap: 5vw;
+}
+.Store-Img{
+    height: 400px;
+    width: 450px;
+}
+
+.Store-Item{
+    height: 300px;
+    width: 300px;
+}
+
+
+.About-Us-Cont{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5vw;
+    font-size: 25px;
+}
+
+.Galeria-Grid{
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+}
+
+
+.Contacto-Cont{
+    margin: 40px;
+    outline: 2px solid grey; /* marca el borde del div, fuera de los márgenes */
+    padding-left: 30vw;
+    padding-right: 30vw;
+    align-self: center;
+}
+
+.Formulario-Cont{
+    font-size: 25px;
+    text-align: end;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+}
+
+.Formulario-Cont label {
+    padding-right: 20px;
+}
+/* footer */
+
+footer{
+    background-color: rgb(45, 137, 241);
+    font-family: Onest;
+    color: antiquewhite;
+}
+
+.footer-container{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    font-size: 25px;
+}
+.rrss{
+    height: 50px;
+    width: 50px;
+}
+
