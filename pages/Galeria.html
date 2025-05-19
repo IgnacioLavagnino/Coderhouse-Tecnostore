@@ -4,69 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Tech Store - Catálogo </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <header>
-        <section class="header-cont">
-            <a href="../index.html">
-                <img class="Logo" src="../img/openart-1b9c49d2-4972-4234-b967-765a32e00043 (1).png" alt="Logo">
-            </a>
-            <input type="text" class="Search-Bar" placeholder="Buscar">
-            <nav>
-                <ul>
-                    <li><a class="enlace-menu" href="./Catalogo.html">Catálogo</a></li>
-                </ul>
-                <ul>
-                    <li><a class="enlace-menu" href="./Sobre-Nosotros.html">Sobre Nosotros</a></li>
-                </ul>
-                <ul>
-                    <li><a class="enlace-menu" href="./Contacto.html">Contacto</a></li>
-                </ul>
-                <ul>
-                    <li><a class="enlace-menu" href="./Galeria.html">Galeria</a></li>
-                </ul>
-            </nav>
-        </section>
-    </header>
+    <div class="wrapper">
+        <header>
+            <section>
+                <div class="container-fluid row header-cont">
+                    <a class="col-4 col-lg-3 d-flex justify-content-center align-items-center" href="../index.html">
+                        <img class="Logo" src="../img/openart-1b9c49d2-4972-4234-b967-765a32e00043 (1).png" alt="Logo">
+                    </a>
+                    <input type="text" class="col-8 col-md-4 Search-Bar" placeholder="Buscar">
+                    <nav class="col-12 col-lg-5">
+                        <ul  class="header-cont d-flex flex-column flex-md-row">
+                            <li><a class="enlace-menu" href="./Catalogo.html">Catálogo</a></li>
+                            <li><a class="enlace-menu" href="./Sobre-Nosotros.html">Sobre Nosotros</a></li>
+                            <li><a class="enlace-menu" href="./Contacto.html">Contacto</a></li>
+                            <li><a class="enlace-menu" href="./Galeria.html">Galeria</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </header>
 
-    <main>
-        <section class="Galeria-Grid">
-            <div>
-                <img class="Store-Item" src="../img/GB-5090.png" alt="GB-5090"> 
+        <main>
+            <section class="Galeria-Grid">
+                    <img class="a item" src="../img/GB-5090.png" alt="GB-5090"> 
+                    <img class="b item" src="../img/tecno3.png" alt="MSI-5090">
+                    <img class="c item" src="../img/MSI-5090.webp" alt="MSI-5090"> 
+                    <img class="d item" src="../img/GB-5090.png" alt="GB-5090"> 
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer-container">
+                <p>Derechos Reservados</p>
+                <img class="rrss" src="../img/Face-Logo.png" alt="Logo-Facebool">
+                <img class="rrss" src="../img/X-Logo.png" alt="Logo-X">
+                <img class="rrss" src="../img/Inst-Logo.png" alt="Logo-Instagram">
             </div>
-            <div>
-                <img class="Store-Item" src="../img/MSI-5090.webp" alt="MSI-5090"> 
-            </div>
-            <div>
-                <img class="Store-Item" src="../img/GB-5090.png" alt="GB-5090"> 
-            </div>
-            <div>
-                <img class="Store-Item" src="../img/MSI-5090.webp" alt="MSI-5090"> 
-            </div>
-            <div>
-                <img class="Store-Item" src="../img/GB-5090.png" alt="GB-5090"> 
-            </div>
-            <div>
-                <img class="Store-Item" src="../img/tecno2.png" alt="MSI-5090"> 
-            </div>
-            <div>
-                <img class="Store-Item" src="../img/GB-5090.png" alt="GB-5090"> 
-            </div>
-            <div>
-                <img class="Store-Item" src="../img/MSI-5090.webp" alt="MSI-5090"> 
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="footer-container">
-            <p>Derechos Reservados</p>
-            <img class="rrss" src="../img/Face-Logo.png" alt="Logo-Facebool">
-            <img class="rrss" src="../img/X-Logo.png" alt="Logo-X">
-            <img class="rrss" src="../img/Inst-Logo.png" alt="Logo-Instagram">
-        </div>
-    </footer>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    </div>
 
 </body>
 </html>
