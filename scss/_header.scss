@@ -1,0 +1,36 @@
+header{
+    background-color: rgb(45, 137, 241);
+    .header-cont{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .Logo{
+            width: 15vw;
+            background-color: rgb(45, 137, 241);
+            min-width: 100px;
+            justify-content: center;
+        }
+        .Search-Bar{
+            flex-grow: 1;
+            border-radius: 30px;
+            background-color: antiquewhite;
+            text-align: end;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none; /* Elimina los puntos de la lista */
+            margin: 0;
+            padding: 0;
+            .enlace-menu{
+                color: antiquewhite;
+                text-decoration: none;
+                display: flex;
+            }
+            .enlace-menu:visited {
+                color: antiquewhite;
+            }
+        }
+    }
+}

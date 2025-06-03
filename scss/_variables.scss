@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Onest;
+    src: url(../font/Onest-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Onest;
+}
+
+main{
+    flex: 1;
+}
+
+.wrapper {
+    min-height: 100vh; /* Ocupa toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+}
+
+
+@mixin mobile{
+    @media (max-width: 768px){
+        @content
+    }
+}

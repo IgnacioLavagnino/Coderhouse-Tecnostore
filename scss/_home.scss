@@ -1,0 +1,20 @@
+main{
+    .carousel-div{
+        display: flex;
+    }
+    .Ofertas {
+        padding-top: 20px;
+        padding-left: 15vw;
+        padding-bottom: 20px;
+        align-items: center;
+    }
+    .Store-Item-Grid{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        display: flex;
+        gap: 5vw;
+        flex-direction: rm-col;
+    }
+}

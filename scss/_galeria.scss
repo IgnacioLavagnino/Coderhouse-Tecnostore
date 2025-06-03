@@ -1,0 +1,56 @@
+.Galeria-Grid{
+    display: grid;
+    
+    grid-template-areas: 
+    "a a b b"
+    "a a c d";
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    justify-items: center;
+    align-items: center;
+
+    @include mobile{
+        grid-template-areas: 
+            "a"
+            "b"
+            "c"
+            "d";
+        grid-template-columns: 1fr;
+    }
+
+    .item{
+        height: 75%;
+        width: 75%;
+    }
+
+    .a{
+        grid-area: a;
+    }
+
+    .b{
+        grid-area: b;
+    }
+
+    .c{
+        grid-area: c;
+    }
+
+    .d{
+        grid-area: d;
+    }
+
+    .bigger:hover{
+        animation: bigger 2s ease;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes bigger{
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.2;
+    }
+}
