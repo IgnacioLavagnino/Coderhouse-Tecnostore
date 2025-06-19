@@ -34,128 +34,145 @@
 
         <main>
             <section class="catalog-Section">
-
+                
                 <div class="accordion" id="FiltersAccordion">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Filtros
+                                Ajustes de Visulaizacion
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                            <div class="accordion-body d-flex justify-content-center align-items-center ">
-                                <div class="d-flex container-fluid flex-column flex-md-row">
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Filtrar por:</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                            <div class="accordion-body d-flex container-fluid flex-column flex-md-row justify-content-center ">
+                                <!-- <div class="d-flex container-fluid flex-column flex-md-row justify-content-center"> -->
+                                    <select class="Odenar-Por form-select" aria-label="Default select example">
+                                        <option selected>Ordenar por:</option>
+                                        <option value="1">Precio Mayor</option>
+                                        <option value="2">Precio Menor</option>
+                                        <option value="3">A-Z</option>
+                                        <option value="4">Marca</option>
                                     </select>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                    </select>
-                                </div>
-                                <button type="button" class="btn btn-primary">Filtrar</button>
+                                    <div class="productos-por-pagina">
+                                        <label for="productos-cantidad">Productos por página:</label>
+                                        <select class="productos-cantidad" >
+                                            <option value="5">5</option>
+                                            <option value="10" selected>10</option> <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="50">50</option>
+                                        </select>
+                                    </div>
+                                    <button type="button" class="btn btn-primary">Ordenar</button>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
-                    
                 </div>
+
+                <section class="d-flex container-fluid flex-column flex-md-row">
+
+                    <aside class="sidebar d-flex container-fluid flex-column">
+                        <section class="filter-group">
+                            <h2>Categorías</h2>
+                            <nav aria-label="Categorías de productos">
+                                <ul class="filter-list">
+                                <li><a href="#">Tarjetas de Video</a></li>
+                                <li><a href="#">Placas Madre</a></li>
+                                <li><a href="#">Monitores</a></li>
+                                <li><a href="#">Periféreicos</a></li>
+                                </ul>
+                            </nav>
+                        </section>
+                        <section class="filter-group">
+                            <h2>Filtrar por Precio</h2>
+                            <div class="price-range">
+                                <input type="number" id="min-price" placeholder="Min" min="0">
+                                <span>-</span>
+                                <input type="number" id="max-price" placeholder="Max" min="0">
+                            </div>
+                        </section>
+                        <section class="filter-group">
+                            <h2>Marcas</h2>
+                            <ul class="filter-list checkbox-list">
+                                <li>
+                                    <input type="checkbox" id="brand-acer" name="brand" value="Acer">
+                                    <label for="brand-acer">Acer</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="brand-hp" name="brand" value="HP">
+                                    <label for="brand-hp">HP</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="brand-dell" name="brand" value="Dell">
+                                    <label for="brand-dell">Dell</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="brand-lenovo" name="brand" value="Lenovo">
+                                    <label for="brand-lenovo">Lenovo</label>
+                                </li>
+                            </ul>
+                        </section>
+                        <button  class="btn btn-primary">Aplicar Filtros</button>
+                    </aside>
+
+                    <section class="Store-Item-Grid d-flex flex-wrap">
+                        <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
+                            <img src="../img/GB-5090.png" class="card-img-top" alt="GB-5090" title="GB-5090">
+                            <div class="card-body">
+                                <h5 class="card-title">Gigabyte RTX-5090</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
+                            <img src="../img/MSI-5090.webp" class="card-img-top" alt="MSI-5090" title="MSI-5090">
+                            <div class="card-body">
+                                <h5 class="card-title">MSI RTX-5090</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
+                            <img src="../img/Asus-RS-X870.webp" class="card-img-top" alt="Asus-RS-X870" title="Asus-RS-X870">
+                            <div class="card-body">
+                                <h5 class="card-title">Asus RS X870</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
+                            <img src="../img/Asus-RS-X670.webp" class="card-img-top" alt="Asus-RS-X670" title="Asus-RS-X670">
+                            <div class="card-body">
+                                <h5 class="card-title">Asus RS X670</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
+                            <img src="../img/Gigabyte-H510m.webp" class="card-img-top" alt="Gigabyte-H510m" title="Gigabyte-H510m">
+                            <div class="card-body">
+                                <h5 class="card-title">Gigabyte H510m</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                        </div>                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
+                            <img src="../img/Corsair-K55-RGB-PRO.webp" class="card-img-top" alt="Corsair-K55-RGB-PRO" title="Corsair-K55-RGB-PRO">
+                            <div class="card-body">
+                                <h5 class="card-title">Corsair K55 RGB PRO</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
+                            <img src="../img/Corsair-Void-Elite-Wireless.webp" class="card-img-top" alt="Corsair-Void-Elite-Wireless" title="Corsair-Void-Elite-Wireless">
+                            <div class="card-body">
+                                <h5 class="card-title">Corsair Void Elite Wireless</h5>
+                                <p class="card-text"></p>
+                                <a href="#" class="btn btn-primary">Detalles</a>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </section>
-
-            <section class="Store-Item-Grid d-flex flex-wrap">
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/GB-5090.png" class="card-img-top" alt="GB-5090" title="GB-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">Gigabyte RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/MSI-5090.webp" class="card-img-top" alt="MSI-5090" title="MSI-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">MSI RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/GB-5090.png" class="card-img-top" alt="GB-5090" title="GB-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">Gigabyte RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/MSI-5090.webp" class="card-img-top" alt="MSI-5090" title="MSI-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">MSI RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/GB-5090.png" class="card-img-top" alt="GB-5090" title="GB-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">Gigabyte RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/MSI-5090.webp" class="card-img-top" alt="MSI-5090" title="MSI-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">MSI RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/GB-5090.png" class="card-img-top" alt="GB-5090" title="GB-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">Gigabyte RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/MSI-5090.webp" class="card-img-top" alt="MSI-5090" title="MSI-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">MSI RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/GB-5090.png" class="card-img-top" alt="GB-5090" title="GB-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">Gigabyte RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-                <div class="card col-12 col-sm-6 col-md-4 col-lg-4" style="width: 18rem;">
-                    <img src="../img/MSI-5090.webp" class="card-img-top" alt="MSI-5090" title="MSI-5090">
-                    <div class="card-body">
-                        <h5 class="card-title">MSI RTX-5090</h5>
-                        <p class="card-text"></p>
-                        <a href="#" class="btn btn-primary">Detalles</a>
-                    </div>
-                </div>
-            </section>
-
-
         </main>
         
         <footer>

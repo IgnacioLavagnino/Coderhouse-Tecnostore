@@ -31,7 +31,13 @@ main{
 
 
 @mixin mobile{
-    @media (max-width: 768px){
+    @media (max-width: 767px){
+        @content
+    }
+}
+
+@mixin tablet{
+    @media (max-width: 991px) and (min-width: 768px){
         @content
     }
 }

@@ -1,3 +1,4 @@
+@use "variables";
 .About-Us-Cont{
     padding-top: 5vh;
     padding-bottom: 5vh;
@@ -7,7 +8,15 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5vw;
     font-size: 25px;
-    @include mobile{
+    @include variables.mobile{
+        grid-template-columns: 1fr;
+        text-align: center;
+        iframe{
+            width: 80vw;
+            height: auto;
+        }
+    }
+    @include variables.tablet{
         grid-template-columns: 1fr;
         text-align: center;
         iframe{
@@ -18,7 +27,7 @@
     .Store-Img{
         height: 400px;
         width: 450px;
-        @include mobile{
+        @include variables.mobile{
             width: 100%;
             height: auto;
             max-width: 100%;

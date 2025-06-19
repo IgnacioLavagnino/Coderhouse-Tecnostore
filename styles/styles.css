@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: Onest;
   src: url(../font/Onest-VariableFont_wght.ttf);
@@ -40,6 +39,8 @@ header .header-cont .Logo {
   width: 15vw;
   background-color: rgb(45, 137, 241);
   min-width: 100px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   justify-content: center;
 }
 header .header-cont .Search-Bar {
@@ -59,6 +60,21 @@ header .header-cont nav ul .enlace-menu {
   color: antiquewhite;
   text-decoration: none;
   display: flex;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  header .header-cont nav ul .enlace-menu {
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  header .header-cont nav ul .enlace-menu {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
 }
 header .header-cont nav ul .enlace-menu:visited {
   color: antiquewhite;
@@ -135,7 +151,17 @@ main .Store-Item-Grid {
   gap: 5vw;
   font-size: 25px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  .About-Us-Cont {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .About-Us-Cont iframe {
+    width: 80vw;
+    height: auto;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
   .About-Us-Cont {
     grid-template-columns: 1fr;
     text-align: center;
@@ -149,7 +175,7 @@ main .Store-Item-Grid {
   height: 400px;
   width: 450px;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .About-Us-Cont .Store-Img {
     width: 100%;
     height: auto;
@@ -157,49 +183,65 @@ main .Store-Item-Grid {
   }
 }
 
-.Contacto-Cont {
-  margin: 40px;
-  outline: 2px solid grey; /* marca el borde del div, fuera de los márgenes */
-  padding-left: 30vw;
-  padding-right: 30vw;
-  align-self: center;
+.Main-Cont {
+  display: flex;
+  justify-content: center;
 }
-@media (max-width: 768px) {
-  .Contacto-Cont {
+.Main-Cont .Contacto-Cont {
+  width: 600px;
+  padding: 40px;
+  margin: 40px;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border: 1px solid #afa4a4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+@media (max-width: 767px) {
+  .Main-Cont .Contacto-Cont {
     padding-left: 5vw;
     padding-right: 5vw;
   }
 }
-.Contacto-Cont .Formulario-Cont {
+.Main-Cont .Contacto-Cont .Formulario-Cont {
   font-size: 25px;
-  text-align: end;
+  text-align: left;
+  gap: 10px;
   display: grid;
   grid-template-columns: repeat(2, 3fr);
 }
-.Contacto-Cont .Formulario-Cont label {
+.Main-Cont .Contacto-Cont .Formulario-Cont label {
   padding-right: 20px;
 }
-.Contacto-Cont .Formulario-Cont input {
+.Main-Cont .Contacto-Cont .Formulario-Cont input {
   width: 100%;
   box-sizing: border-box;
 }
-@media (max-width: 768px) {
-  .Contacto-Cont .Formulario-Cont {
+.Main-Cont .Contacto-Cont .Formulario-Cont textarea {
+  font-size: 15px;
+}
+.Main-Cont .Contacto-Cont .Formulario-Cont span {
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  .Main-Cont .Contacto-Cont .Formulario-Cont {
     grid-template-columns: 1fr;
     text-align: start;
     row-gap: 10px;
   }
-  .Contacto-Cont .Formulario-Cont label {
+  .Main-Cont .Contacto-Cont .Formulario-Cont label {
     padding-right: 0;
   }
 }
-.Contacto-Cont .env-btn {
-  margin: 10px;
+.Main-Cont .Contacto-Cont .btn {
+  margin-top: 10px;
 }
 
 .catalog-Section {
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .catalog-Section .accordion {
   display: flex;
@@ -216,17 +258,109 @@ main .Store-Item-Grid {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 20px;
+}
+.catalog-Section .accordion .accordion-body .productos-por-pagina {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+}
+.catalog-Section .accordion .accordion-body .productos-por-pagina label {
+  flex-wrap: nowrap;
+}
+.catalog-Section .accordion .accordion-body .productos-por-pagina .productos-cantidad {
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 .catalog-Section .Store-Item-Grid {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
   display: flex;
-  gap: 5vw;
-  flex-direction: rm-col;
+  gap: 3vw;
+}
+.catalog-Section .Store-Item-Grid .card-img-top {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.catalog-Section .Store-Item-Grid .card:hover {
+  animation: card-hover 0.5s ease;
+  animation-fill-mode: forwards;
+}
+.catalog-Section .sidebar {
+  width: 250px;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  margin-bottom: 5vh;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.catalog-Section .sidebar .filter-group {
+  margin-bottom: 20px;
+}
+.catalog-Section .sidebar .filter-group h2 {
+  font-size: 1.1em;
+  color: #333;
+}
+.catalog-Section .sidebar .filter-group .price-range {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.catalog-Section .sidebar .filter-group .price-range input[type=number] {
+  width: 80px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9em;
+  text-align: center;
+}
+.catalog-Section .sidebar .filter-group .filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.catalog-Section .sidebar .filter-group .filter-list a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.95em;
+}
+.catalog-Section .sidebar .filter-group .filter-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.catalog-Section .sidebar .filter-group .filter-list li input {
+  margin-right: 8px;
+}
+.catalog-Section .sidebar .filter-group .filter-list li label {
+  font-size: 0.95em;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .catalog-Section .sidebar {
+    width: auto;
+  }
+  .catalog-Section .sidebar .filter-group {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
+@keyframes card-hover {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.1;
+  }
+}
 .Galeria-Grid {
   display: grid;
   grid-template-areas: "a a b b" "a a c d";
@@ -235,7 +369,7 @@ main .Store-Item-Grid {
   justify-items: center;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .Galeria-Grid {
     grid-template-areas: "a" "b" "c" "d";
     grid-template-columns: 1fr;
@@ -258,7 +392,7 @@ main .Store-Item-Grid {
   grid-area: d;
 }
 .Galeria-Grid .bigger:hover {
-  animation: bigger 2s ease;
+  animation: bigger 1.5s ease;
   animation-fill-mode: forwards;
 }
 

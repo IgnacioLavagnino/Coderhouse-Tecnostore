@@ -1,6 +1,9 @@
+@use "variables";
 .catalog-Section{
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
     .accordion{
         display: flex;
         flex-direction: row;
@@ -15,15 +18,109 @@
             display: flex;
             flex-direction: row;
             justify-content: space-around;
+            gap: 20px;
+            .productos-por-pagina{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                label{
+                    flex-wrap: nowrap;
+                }
+                width: 250px;
+                .productos-cantidad{
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                }
+            }
         }
     }
     .Store-Item-Grid{
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 10vw;
-        padding-right: 10vw;
+        // padding-top: 20px;
+        padding-bottom: 5vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
         display: flex;
-        gap: 5vw;
-        flex-direction: rm-col;
+        gap: 3vw;
+        .card-img-top{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .card:hover{
+            animation: card-hover 0.5s ease;
+            animation-fill-mode: forwards;
+        }
+    }
+    .sidebar{
+        width: 250px;
+        margin-left: 3vw;
+        margin-right: 3vw;
+        margin-bottom: 5vh;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        .filter-group{
+            margin-bottom: 20px;
+            h2{
+                font-size: 1.1em;
+                color: #333;
+                // padding-bottom: 15px;
+            }
+            .price-range {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin-bottom: 10px;
+                input[type="number"] {
+                    width: 80px;
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 0.9em;
+                    text-align: center;
+                }
+            }
+            .filter-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                a {
+                    text-decoration: none;
+                    color: #007bff;
+                    font-size: 0.95em;
+                }
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+                    input{
+                        margin-right: 8px;
+                    }
+                    label {
+                        font-size: 0.95em;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        @include variables.mobile{
+            width: auto;
+            .filter-group{
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+
+@keyframes card-hover{
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.1;
     }
 }

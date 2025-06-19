@@ -1,3 +1,4 @@
+@use "variables";
 header{
     background-color: rgb(45, 137, 241);
     .header-cont{
@@ -7,8 +8,10 @@ header{
         align-items: center;
         .Logo{
             width: 15vw;
-            background-color: $variable1;
+            background-color: variables.$variable1;
             min-width: 100px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             justify-content: center;
         }
         .Search-Bar{
@@ -27,6 +30,17 @@ header{
                 color: antiquewhite;
                 text-decoration: none;
                 display: flex;
+                font-size: 20px;
+                margin-left: 5px;
+                margin-right: 5px;
+                white-space: nowrap;
+                @include variables.mobile{
+                    padding-bottom: 10px;
+                }
+                @include variables.tablet{
+                    padding-bottom: 20px;
+                    padding-top: 10px;
+                }
             }
             .enlace-menu:visited {
                 color: antiquewhite;
